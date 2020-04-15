@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class='container'>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-2 col-xs-12">
+
         <div class="panel panel-default">
           <div class="panel-heading">
             Dashboard
@@ -39,10 +37,5 @@
           </div>
 
         </div>
-      </div>
-    </div>
-
-
-    </div>
 
 @endsection

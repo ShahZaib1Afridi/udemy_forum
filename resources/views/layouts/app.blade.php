@@ -53,10 +53,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto" id="header_menu">
-                        <li><a href="">Channels</a></li>
 
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class=" pull-right navbar-nav ml-auto">
@@ -93,10 +90,38 @@
                 </div>
             </div>
         </nav>
+        <div class='container'>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+        <div class="col-lg-4">
+            
+
+            <div class="panel panel-default">
+                    <a href="{{ route('discussions.create') }}" class='btn btn-md btn-primary '>Create new discussion</a>
+              <div class="panel-heading">
+                Channel:
+              </div>
+              <div class="panel-body">
+                    <ul class="list-group">
+                        @foreach ($channels as $channel)
+                           <li class="list-group-item">
+                            {{ $channel->title }}
+
+                           </li>
+                        @endforeach
+
+                            </ul>
+                      </div>
+
+                    </div>
+
+                    </div>
+
+
+                            <div class="col-lg-8">
+                                @yield('content')
+                            </div>
+
+        </div>
+        </div>
 </body>
 </html>

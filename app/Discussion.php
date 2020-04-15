@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Discussion extends Model
 {
-    protected $fillable =['title','user_id','channel_id','content'];
+    protected $fillable =['title','user_id','channel_id','content','slug'];
 
 
     public function channel()
@@ -21,6 +21,6 @@ class Discussion extends Model
 
     public function replies()
     {
-        return $this->hasMany'App\Reply');
+        return $this->hasMany('App\Reply');
     }
 }
